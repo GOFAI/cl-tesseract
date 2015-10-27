@@ -12,7 +12,7 @@
   (namestring (or (probe-file "/usr/local/share/tessdata") ; Homebrew
                   (probe-file "/usr/local/tessdata")))
   #+windows
-  (namestring (probe-file "C:\\Program Files\\Tesseract OCR\\tessdata"))
+  (namestring (probe-file #P"C:\\Program Files\\Tesseract OCR\\tessdata"))
   "*tessdata-directory* should point to the location of the directory containing 
 .traineddata files for use by Tesseract. The value must be a string representing the full 
 path to the directory. 

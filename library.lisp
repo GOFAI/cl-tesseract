@@ -10,6 +10,7 @@
 (defparameter *tessdata-directory* 
   #+unix
   (namestring (or (probe-file "/usr/local/share/tessdata") ; Homebrew
+		  (probe-file "/opt/homebrew/share/tessdata")
                   (probe-file "/usr/local/tessdata")))
   #+windows
   (namestring (probe-file "C:\\Program Files\\Tesseract OCR\\tessdata"))
